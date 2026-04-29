@@ -71,7 +71,7 @@ Try accessing the `return_value` identifier without prepending `$`.
 **What happens and why?**
 
 <details>
-    <summary>You Answer</summary>
+    <summary>Ohne $ weiß das System nicht das man auf eine Variable zugreifen will. Also wird nur der Text ausgegeben. </summary>
     ......
 </details>
 
@@ -97,7 +97,8 @@ and pressing `enter`.
 
 <details>
     <summary>Calling a Function</summary>
-    Include a screenshot of your function-call!
+    <img width="501" height="233" alt="Screenshot pp2 task 3" src="https://github.com/user-attachments/assets/7925d1c9-28e1-45d3-b582-dd9bf7b87cf7" />
+
 </details>
 
 ### Task 4: Handling Parameters
@@ -263,7 +264,19 @@ These examples demonstrate various fundamental operations in Bash scripting, inc
     <summary>Your Function</summary>
     
 ```bash
-your code
+Analysiereden_Text() {
+text="$1"
+length=${#text}
+if (( length > 20 )); then
+echo "Der Text hat mehr als 20 Zeichen."
+else
+echo "Der Text hat 20 Zeichen oder weniger."
+fi
+doubled_length=$(( length * 2 ))
+echo "Die doppelte Länge des Textes ist: $doubled_length"
+substring=${text:0:5}
+echo "Die ersten Fünf Zeichen: $substring"
+}
 ```
 
 </details>
@@ -300,7 +313,7 @@ cat ./function
 
 **What happend?**
 <details>
-    <summary>Your Explaination</summary>
+    <summary>In ./function steht nur die zweite funktion. In ./functions stehen beide funktionen da bei > nur überschreibt und bei >>anhängt </summary>
     .....
 
 </details>
@@ -343,7 +356,7 @@ You can use a shorthand within your calls to add this string as a prefix to any 
 
 **Look at task 6 again. What is the complete filepath of your functions file?**
 <details>
-    <summary>Your Answer</summary>
+    <summary>Für die Aufgabe 6 ist mein Pfad /home/TobiasRehaag/functions </summary>
     ....
 </details>
 
@@ -367,7 +380,8 @@ cd /
 ```
 **Run `ls` again and insert the content here:**
 <details>
-    <summary>Your Answer</summary>
+    <summary><img width="601" height="80" alt="pp2 task 9" src="https://github.com/user-attachments/assets/6b9bfd4e-93ac-4e6e-a3cb-5575cd530b8b" />
+</summary>
     ....
 </details>
 
@@ -384,7 +398,13 @@ Use `rm` to delete a file and `rm -rf` to delete a directory.
 <details>
     <summary>Your Terminal Output</summary>
 ```bash
-your terminal output
+-rw-r--r-- 1 TobiasRehaag TobiasRehaag    0 Apr 29 20:49 emptyfile
+TobiasRehaag@TR-Desktop:~/test$ cd
+TobiasRehaag@TR-Desktop:~$ rm -rf test
+TobiasRehaag@TR-Desktop:~$ ls
+'doubled_length=48'   echo   else   fi   function   functions  'substring=Guten'  'text='   _Text
+TobiasRehaag@TR-Desktop:~$
+
 ```
 </details>
 
@@ -438,7 +458,7 @@ When you finished that tutorial, open a file in your home directory and manipula
 
 **How do you save a buffer to a new filename from within `vim`?**
 <details>
-    <summary>Your Answer</summary>
+    <summary>Mann macht es mit :w oder auch mit :saveas </summary>
     .....
 </details>
  
